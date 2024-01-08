@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Hari9490/private2.git'
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('deploy') {
+           steps {
+              sh 'python3 hello.py'
+    }
+}
