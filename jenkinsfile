@@ -10,7 +10,7 @@ pipeline {
         }
         stage('deploy') {
            steps {
-              sh 'python3 hello_world'
+              sh 'python3 hello.py'
           }
        }
     }
